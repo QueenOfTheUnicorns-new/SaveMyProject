@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="atk">Атака</string>
+    <string name="def">Защита</string>
+    <string name="start">Начать</string>
+    <string name="exit">Выход</string>
+    <string name="name_game">Reverse side of the mind</string>
+    <string name="select">Выбрать</string>
+    <string name="select_character">Выберете персонажа</string>
+    <string name="_100">100</string>
+    <string name="_130">130</string>
+    <string name="_15">15</string>
+    <string name="_8">8</string>
+    <string name="_60">60</string>
+    <string name="_10">10</string>
+    <string name="_30">30</string>
+    <string name="_5">5</string>
+    <string name="_25">25</string>
+    <string name="some_time">#?@№^%</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+    <string name="_3">3</string>
+    <string name="_4">4</string>
+</resources>

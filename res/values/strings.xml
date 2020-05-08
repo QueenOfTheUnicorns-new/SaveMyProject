@@ -1,24 +1,148 @@
 <resources>
-    <string name="app_name">My Application</string>
+
+    <string name="app_name">Reverse side of the mind</string>
+
     <string name="atk">Атака</string>
+
     <string name="def">Защита</string>
+
     <string name="start">Начать</string>
+
     <string name="exit">Выход</string>
+
     <string name="name_game">Reverse side of the mind</string>
+
     <string name="select">Выбрать</string>
+
     <string name="select_character">Выберете персонажа</string>
+
     <string name="_100">100</string>
+
     <string name="_130">130</string>
+
     <string name="_15">15</string>
+
     <string name="_8">8</string>
+
     <string name="_60">60</string>
+
     <string name="_10">10</string>
+
     <string name="_30">30</string>
+
     <string name="_5">5</string>
+
     <string name="_25">25</string>
+
     <string name="some_time">#?@№^%</string>
+
     <string name="_1">1</string>
+
     <string name="_2">2</string>
+
     <string name="_3">3</string>
+
     <string name="_4">4</string>
+
+    <string name="f_1">1</string>
+
+    <string name="f_2">2</string>
+
+    <string name="f_3">3</string>
+
+    <string name="f_4">4</string>
+
+    <string name="f_5">5</string>
+
+    <string name="f_6">6</string>
+
+    <string name="f_7">7</string>
+
+    <string name="f_8">8</string>
+
+    <string name="f_9">9</string>
+
+    <string name="f_10">10</string>
+
+    <string name="f_11">11</string>
+
+    <string name="f_12">12</string>
+
+    <string name="f_13">13</string>
+
+    <string name="f_14">14</string>
+
+    <string name="f_15">15</string>
+
+    <string name="f_16">16</string>
+
+    <string name="f_17">17</string>
+
+    <string name="f_18">18</string>
+
+    <string name="f_19">19</string>
+
+    <string name="f_20">20</string>
+
+    <string name="f_21">21</string>
+
+    <string name="f_22">22</string>
+
+    <string name="f_23">23</string>
+
+    <string name="f_24">24</string>
+
+    <string name="f_25">25</string>
+
+    <string name="f_26">26</string>
+
+    <string name="f_27">27</string>
+
+    <string name="f_28">28</string>
+
+    <string name="f_29">29</string>
+
+    <string name="f_30">30</string>
+
+    <string name="f_31">31</string>
+
+    <string name="f_32">32</string>
+
+    <string name="f_33">33</string>
+
+    <string name="f_34">34</string>
+
+    <string name="f_35">35</string>
+
+    <string name="f_36">36</string>
+
+    <string name="f_37">37</string>
+
+    <string name="f_38">38</string>
+
+    <string name="f_39">39</string>
+
+    <string name="f_40">40</string>
+
+    <string name="f_41">41</string>
+
+    <string name="f_42">42</string>
+
+    <string name="f_43">43</string>
+
+    <string name="f_44">44</string>
+
+    <string name="f_45">45</string>
+
+    <string name="f_46">46</string>
+
+    <string name="f_47">47</string>
+
+    <string name="f_48">48</string>
+
+    <string name="f_49">49</string>
+
+    <string name="f_50">50</string>
+
+
 </resources>

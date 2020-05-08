@@ -1,5 +1,480 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical">
+
+
+    <!--Верхняя панель с кнопкой выхода-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="1sp"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="30sp"
+            android:layout_weight="1"
+            android:layout_margin="1sp"
+
+            android:id="@+id/btn_back"
+            android:src="@drawable/f_backbtn"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30sp"
+            android:layout_weight="1"
+            android:layout_margin="1sp"
+            android:gravity="center"
+
+            android:id="@+id/titleTV"
+            android:background="@color/black"
+
+            android:textSize="25sp"
+            android:text="ВЫБОР ПЕРСОНАЖА"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+
+    <!--Блок ввода имени-->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_margin="1sp"
+        android:gravity="center"
+
+        android:hint="ВАШЕ ИМЯ?"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        android:textColorHint="#FFFFFFFF"
+
+        android:background="@color/black" />
+
+
+
+    <!--Изображения существ и их названия-->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <TableRow>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:layout_margin="1sp"
+
+                android:id="@+id/TBL1imV1"
+                android:background="@color/black"
+
+                android:src="@drawable/f_pink_monster" />
+
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:layout_weight="1"
+                android:layout_margin="1sp"
+
+                android:id="@+id/TBL1imV2"
+                android:background="@color/black"
+
+                android:src="@drawable/f_white_monster"/>
+
+
+            <ImageView
+
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:layout_weight="1"
+                android:layout_margin="1sp"
+
+                android:id="@+id/TBL1imV3"
+                android:background="@color/black"
+
+                android:src="@drawable/f_blue_monster"/>
+        </TableRow>
+
+
+
+
+        <TableRow>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:layout_weight="1"
+                android:layout_margin="1sp"
+
+                android:background="@color/black"
+                android:id="@+id/TBL1imV4" />               <!--TV under 1-->
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:layout_weight="1"
+                android:layout_margin="1sp"
+
+                android:background="@color/black"
+                android:id="@+id/TBL1imV5" />               <!--TV under 3-->
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="30sp"
+                android:layout_weight="1"
+                android:layout_margin="1sp"
+
+                android:background="@color/black"
+                android:id="@+id/TBL1imV6" />               <!--TV under 3-->
+        </TableRow>
+    </TableLayout>
+
+
+
+    <!--Характеристики-->>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!--Первая таблица-->>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TableRow>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL2imV1"
+                    android:background="@color/black"
+                    android:src="@drawable/icon_heart"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL2imV2"
+                    android:background="@color/black"
+                    android:src="@drawable/f_atack"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL2imV3"
+                    android:background="@color/black"
+                    android:src="@drawable/shield" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL2imV4"
+                    android:background="@color/black"
+                    android:src="@drawable/bag"/>
+            </TableRow>
+
+
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL2TV5"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL2TV6"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL2TV7"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL2imV8"
+                    android:background="@color/black" />
+            </TableRow>
+
+
+
+
+            <!--Вторая таблица-->>
+        </TableLayout>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TableRow>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL3imV1"
+                    android:background="@color/black"
+                    android:src="@drawable/icon_heart" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL3imV2"
+                    android:background="@color/black"
+                    android:src="@drawable/f_atack"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL3imV3"
+                    android:background="@color/black"
+                    android:src="@drawable/shield"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL3imV4"
+                    android:background="@color/black"
+                    android:src="@drawable/bag"/>
+            </TableRow>
+
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL3TV5"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL3TV6"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL3TV7"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL3TV8"
+                    android:background="@color/black" />
+            </TableRow>
+        </TableLayout>
+
+
+
+        <!--Третья таблица-->>
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <TableRow>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL4imV1"
+                    android:background="@color/black"
+                    android:src="@drawable/icon_heart" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL4imV2"
+                    android:background="@color/black"
+                    android:src="@drawable/f_atack"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL4imV3"
+                    android:background="@color/black"
+                    android:src="@drawable/shield"/>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL4imV4"
+                    android:background="@color/black"
+                    android:src="@drawable/bag"/>
+            </TableRow>
+
+
+            <TableRow>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL4TV5"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL4TV6"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL4TV7"
+                    android:background="@color/black" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="25sp"
+                    android:layout_weight="1"
+                    android:layout_margin="1sp"
+
+                    android:id="@+id/TBL4TV8"
+                    android:background="@color/black" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_margin="1sp">
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="38sp"
+            android:layout_weight="1"
+            android:layout_margin="1sp"
+
+            android:text="ВЫБРАТЬ"
+            android:textStyle="bold"
+            android:textColor="#FFFFFFFF"
+
+            android:id="@+id/select_first_character"
+            android:background="@color/black" />           <!--Button under 1-->
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="38sp"
+            android:layout_weight="1"
+            android:layout_margin="1sp"
+
+            android:text="ВЫБРАТЬ"
+            android:textStyle="bold"
+            android:textColor="#FFFFFFFF"
+
+            android:id="@+id/select_second_character"
+            android:background="@color/black" />           <!--Button under 2-->
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="38sp"
+            android:layout_weight="1"
+            android:layout_margin="1sp"
+
+            android:text="ВЫБРАТЬ"
+            android:textStyle="bold"
+            android:textColor="#FFFFFFFF"
+
+            android:id="@+id/select_third_character"
+            android:background="@color/black"/>            <!--Button under 3-->
+    </LinearLayout>
+</LinearLayout>
+
+
+
+
+<!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/light_dark"
@@ -169,7 +644,7 @@
                     android:layout_marginRight="3dp"
                     android:layout_marginBottom="3dp"
                     android:layout_weight="1"
-                    android:background="@drawable/icon_defense" />
+                    android:background="@drawable/shield" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -273,7 +748,7 @@
                     android:layout_marginRight="3dp"
                     android:layout_marginBottom="3dp"
                     android:layout_weight="1"
-                    android:background="@drawable/icon_defense" />
+                    android:background="@drawable/shield" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -377,7 +852,7 @@
                     android:layout_marginRight="3dp"
                     android:layout_marginBottom="3dp"
                     android:layout_weight="1"
-                    android:background="@drawable/icon_defense" />
+                    android:background="@drawable/shield" />
 
                 <TextView
                     android:layout_width="match_parent"
@@ -465,4 +940,4 @@
                 android:textSize="23sp" />
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</LinearLayout>-->

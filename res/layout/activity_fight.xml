@@ -29,6 +29,22 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:text="skill"
+        android:textSize="25sp"
+        android:id="@+id/skill"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="shadow atk"
+        android:textSize="25sp"
+        android:id="@+id/shadow_atk"
+        android:textColor="@android:color/black"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         android:text="@string/def"
         android:textSize="25sp"
         android:id="@+id/def"

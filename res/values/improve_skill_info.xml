@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="this_skill">Нынешний навык</string>
+    <string name="next_skill">Улучшенный навык</string>
+    <string name="phis_skill_1">Увеличивает атаку на 10%</string>
+    <string name="phis_skill_2">Увеличивает атаку на 15% и максимальное здоровье на 20%</string>
+    <string name="phis_skill_3">Увеличивает атаку на 20%, максимальное здоровье на 30% и защиту на 10%</string>
+    <string name="p">-</string>
+    <string name="second_atk_skill_1">Атака игнорирующая 20% защиты противника</string>
+    <string name="second_atk_skill_2">Атака игнорирующая 30% защиты противника и увеличивающая урон на 10%</string>
+    <string name="second_atk_skill_3">Атака игнорирующая 40% защиты противника и увеличивающая урон на 20%</string>
+    <string name="shadow_atk_1">Наносит 10% урона от максимального здоровья противника, не игнорируя защиту</string>
+    <string name="shadow_atk_2">Наносит 15% урона от максимального здоровья противника, игнорируя 50% его защиты</string>
+    <string name="shadow_atk_3">Наносит 20% урона от максимального здоровья противника + 25% от вашей атаки, игнорируя 50% его защиты</string>
+    <string name="shadow_atk_4">Наносит 25% урона от максимального здоровья противника + 25% от вашей атаки, игнорируя его защиту</string>
+</resources>

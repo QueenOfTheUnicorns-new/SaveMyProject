@@ -14,6 +14,8 @@ import android.widget.Toast;
 import java.util.ArrayList;
 
 public class Shop extends AppCompatActivity {
+    View view;
+
 
     Button shop_back;
 
@@ -49,7 +51,29 @@ public class Shop extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
 
+
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+
+
+
+        view = getWindow().getDecorView();
+
+        view.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
+            @Override
+            public void onSystemUiVisibilityChange(int visibility) {
+                if (visibility == 0)
+                    view.setSystemUiVisibility(
+                            View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                                    | View.SYSTEM_UI_FLAG_FULLSCREEN
+                                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+            }
+        });
+
+
+
 
         hero = (Character) getIntent().getSerializableExtra("hero_get");
 
@@ -57,33 +81,33 @@ public class Shop extends AppCompatActivity {
 
         items = generator.itemForShopGenerator(hero.getHeroItems());
 
-        shop_back =(Button) findViewById(R.id.shop_back);
+        shop_back = findViewById(R.id.shop_back);
 
-        shop_money = (TextView) findViewById(R.id.shop_money);
+        shop_money = findViewById(R.id.shop_money);
 
-        top_shop_button_1 = (Button) findViewById(R.id.top_shop_button_1);
-        top_shop_button_2 = (Button) findViewById(R.id.top_shop_button_2);
-        top_shop_button_3 = (Button) findViewById(R.id.top_shop_button_3);
+        top_shop_button_1 = findViewById(R.id.top_shop_button_1);
+        top_shop_button_2 = findViewById(R.id.top_shop_button_2);
+        top_shop_button_3 = findViewById(R.id.top_shop_button_3);
 
-        bottom_shop_button_1 = (Button) findViewById(R.id.bottom_shop_button_1);
-        bottom_shop_button_2 = (Button) findViewById(R.id.bottom_shop_button_2);
-        bottom_shop_button_3 = (Button) findViewById(R.id.bottom_shop_button_3);
+        bottom_shop_button_1 = findViewById(R.id.bottom_shop_button_1);
+        bottom_shop_button_2 = findViewById(R.id.bottom_shop_button_2);
+        bottom_shop_button_3 = findViewById(R.id.bottom_shop_button_3);
 
-        quality_item_top_1 = (TextView) findViewById(R.id.quality_item_top_1);
-        quality_item_top_2 = (TextView) findViewById(R.id.quality_item_top_2);
-        quality_item_top_3 = (TextView) findViewById(R.id.quality_item_top_3);
+        quality_item_top_1 = findViewById(R.id.quality_item_top_1);
+        quality_item_top_2 = findViewById(R.id.quality_item_top_2);
+        quality_item_top_3 = findViewById(R.id.quality_item_top_3);
 
-        quality_item_bottom_1 = (TextView) findViewById(R.id.quality_item_bottom_1);
-        quality_item_bottom_2 = (TextView) findViewById(R.id.quality_item_bottom_2);
-        quality_item_bottom_3 = (TextView) findViewById(R.id.quality_item_bottom_3);
+        quality_item_bottom_1 = findViewById(R.id.quality_item_bottom_1);
+        quality_item_bottom_2 = findViewById(R.id.quality_item_bottom_2);
+        quality_item_bottom_3 = findViewById(R.id.quality_item_bottom_3);
 
-        price_item_top_1 = (TextView) findViewById(R.id.price_item_top_1);
-        price_item_top_2 = (TextView) findViewById(R.id.price_item_top_2);
-        price_item_top_3 = (TextView) findViewById(R.id.price_item_top_3);
+        price_item_top_1 = findViewById(R.id.price_item_top_1);
+        price_item_top_2 = findViewById(R.id.price_item_top_2);
+        price_item_top_3 = findViewById(R.id.price_item_top_3);
 
-        price_item_bottom_1 = (TextView) findViewById(R.id.price_item_bottom_1);
-        price_item_bottom_2 = (TextView) findViewById(R.id.price_item_bottom_2);
-        price_item_bottom_3 = (TextView) findViewById(R.id.price_item_bottom_3);
+        price_item_bottom_1 = findViewById(R.id.price_item_bottom_1);
+        price_item_bottom_2 = findViewById(R.id.price_item_bottom_2);
+        price_item_bottom_3 = findViewById(R.id.price_item_bottom_3);
 
         top_shop_button_1.setText(generator.infoAboutItemInShop(items.get(0)).split("\\.")[0]);
         top_shop_button_2.setText(generator.infoAboutItemInShop(items.get(1)).split("\\.")[0]);
@@ -127,12 +151,30 @@ public class Shop extends AppCompatActivity {
 
     }
 
+
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus){
+            view.setSystemUiVisibility(
+                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                            | View.SYSTEM_UI_FLAG_FULLSCREEN
+                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION);
+        }
+    }
+
+
     private class ButtonTreatment implements View.OnClickListener {
 
         @Override
         public void onClick(View v) {
             switch (v.getId()) {
                 case R.id.shop_back:
+                    shop_back.setEnabled(false);
                     Intent i = new Intent(Shop.this, Locate.class);
                     i.putExtra("hero_get", hero);
                     MainActivity.setLevel(MainActivity.getLevel() + 1);
@@ -140,6 +182,7 @@ public class Shop extends AppCompatActivity {
                     break;
 
                 case R.id.top_shop_button_1:
+                    top_shop_button_1.setEnabled(false);
                     int priceItem1 = Integer.parseInt(price_item_top_1.getText().toString());
                     if(hero.getMoney() >= priceItem1) {
                         hero.setMoney(hero.getMoney() - priceItem1);
@@ -156,6 +199,7 @@ public class Shop extends AppCompatActivity {
                     break;
 
                 case R.id.top_shop_button_2:
+                    top_shop_button_2.setEnabled(false);
                     int priceItem2 = Integer.parseInt(price_item_top_2.getText().toString());
                     if(hero.getMoney() >= priceItem2) {
                         hero.setMoney(hero.getMoney() - priceItem2);
@@ -172,6 +216,7 @@ public class Shop extends AppCompatActivity {
                     break;
 
                 case R.id.top_shop_button_3:
+                    top_shop_button_3.setEnabled(false);
                     int priceItem3 = Integer.parseInt(price_item_top_3.getText().toString());
                     if(hero.getMoney() >= priceItem3) {
                         hero.setMoney(hero.getMoney() - priceItem3);
@@ -188,6 +233,7 @@ public class Shop extends AppCompatActivity {
                     break;
 
                 case R.id.bottom_shop_button_1:
+                    bottom_shop_button_1.setEnabled(false);
                     int priceItem4 = Integer.parseInt(price_item_bottom_1.getText().toString());
                     if(hero.getMoney() >= priceItem4) {
                         hero.setMoney(hero.getMoney() - priceItem4);
@@ -204,6 +250,7 @@ public class Shop extends AppCompatActivity {
                     break;
 
                 case R.id.bottom_shop_button_2:
+                    bottom_shop_button_2.setEnabled(false);
                     int priceItem5 = Integer.parseInt(price_item_bottom_2.getText().toString());
                     if(hero.getMoney() >= priceItem5) {
                         hero.setMoney(hero.getMoney() - priceItem5);
@@ -220,6 +267,7 @@ public class Shop extends AppCompatActivity {
                     break;
 
                 case R.id.bottom_shop_button_3:
+                    bottom_shop_button_3.setEnabled(false);
                     int priceItem6 = Integer.parseInt(price_item_bottom_3.getText().toString());
                     if(hero.getMoney() >= priceItem6) {
                         hero.setMoney(hero.getMoney() - priceItem6);

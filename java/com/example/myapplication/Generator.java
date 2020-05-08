@@ -215,5 +215,10 @@ public class Generator {
                 return orange;
         }
     }
+
+    public String skillLevel(int skillLevel, int maxSkillLevel) {
+        return "Уровень навыка" + "\n" + skillLevel + "/" + maxSkillLevel;
+
+    }
 }
 

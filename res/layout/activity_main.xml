@@ -1,5 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+
+<RelativeLayout android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent">
+
+
+<com.flaviofaria.kenburnsview.KenBurnsView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/KBV"
+    android:src="@drawable/f_forest_fog"/>
+
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/start"
+            android:layout_weight="1"
+            android:id="@+id/start"
+            android:layout_marginBottom="10dp" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="НАСТРОЙКИ"
+            android:layout_weight="1"
+            android:id="@+id/character_btn"
+            android:layout_marginBottom="10dp" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/exit"
+            android:layout_weight="1"
+            android:id="@+id/exit"
+            android:layout_marginBottom="30dp"/>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="360dp"
+        android:layout_height="230dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
+
+
+
+<!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
@@ -41,4 +114,4 @@
         android:text="@string/name_game"
         android:textColor="@android:color/holo_orange_dark"
         android:textSize="30sp" />
-</RelativeLayout>
+</RelativeLayout>-->

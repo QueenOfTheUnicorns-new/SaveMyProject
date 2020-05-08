@@ -10,4 +10,15 @@
     <color name="blue">#3F51B5</color>
     <color name="purple">#9C27B0</color>
     <color name="orange">#E25324</color>
+    <color name="black">#050505</color>
+    <color name="Table_black">#68141414</color>
+    <color name="ImageViewBlack">#C80A0A0A</color>
+    <color name="TableRowLiner_white">#5EFCF9F9</color>
+    <color name="UnderLinearWhite">#C3FCF9F9</color>
+    <color name="TableRowLinerElement_black">#BC111010</color>
+    <color name="TableRowLinerBottomElements_black">#111010</color>
+    <color name="white">#FAFAFA</color>
+    <color name="none">#00FAFAFA</color>
+
+    <color name="TextWhite">#CBFFFEFE</color>
 </resources>
